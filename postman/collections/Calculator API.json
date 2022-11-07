@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "8c169af1-38c8-4101-9dd0-9dd4258255a0",
+		"name": "Calculator API",
+		"description": "This is a awsome calculator API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "24293787-8c169af1-38c8-4101-9dd0-9dd4258255a0"
+	},
+	"item": [
+		{
+			"name": "add",
+			"item": [
+				{
+					"name": "Add Numbers",
+					"id": "e76894fd-88ff-4dcd-996b-73cd97181f88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"augend\": -65799710,\n  \"addend\": 63988457\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"add"
+							]
+						},
+						"description": "This is the Add Numbers operation"
+					},
+					"response": [
+						{
+							"id": "92b25805-3a75-4138-9813-2ee7da1d7ab0",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"augend\": -65799710,\n  \"addend\": 63988457\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"add"
+									]
+								},
+								"description": "This is the Add Numbers operation"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"result\": 11607753\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Numbers Added",
+					"id": "5deda99e-f2be-4ced-b134-92b69dd2bf99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/add/:augend/with/:addend",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"add",
+								":augend",
+								"with",
+								":addend"
+							],
+							"variable": [
+								{
+									"key": "augend",
+									"value": "53737432",
+									"description": "(Required) "
+								},
+								{
+									"key": "addend",
+									"value": "53737432",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "This is the Get Numbers Added operation"
+					},
+					"response": [
+						{
+							"id": "099811b0-47fc-4dd2-a454-55b403d937b2",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/add/:augend/with/:addend",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"add",
+										":augend",
+										"with",
+										":addend"
+									],
+									"variable": [
+										{
+											"key": "augend",
+											"value": "53737432",
+											"description": "(Required) "
+										},
+										{
+											"key": "addend",
+											"value": "53737432",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "This is the Get Numbers Added operation"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"result\": 11607753\n}"
+						}
+					]
+				}
+			],
+			"id": "7b660b93-bfc3-43e9-b4eb-6404d7223459"
+		},
+		{
+			"name": "Get Numbers Subtracted",
+			"id": "2dadc602-70d8-4400-8c4d-90280c0c4733",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/subtract/:minuend/with{{subtrahend}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"subtract",
+						":minuend",
+						"with{{subtrahend}}"
+					],
+					"variable": [
+						{
+							"key": "minuend",
+							"value": "53737432",
+							"description": "(Required) "
+						}
+					]
+				},
+				"description": "This is the Get Numbers Subtracted operation"
+			},
+			"response": [
+				{
+					"id": "2a3a884d-4eb5-49a8-911f-68e78e8cde56",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/subtract/:minuend/with{{subtrahend}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"subtract",
+								":minuend",
+								"with{{subtrahend}}"
+							],
+							"variable": [
+								{
+									"key": "minuend",
+									"value": "53737432",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "This is the Get Numbers Subtracted operation"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"result\": 11607753\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Numbers Multiplied",
+			"id": "6d9deea8-9054-4587-8c7d-9697d2b53149",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/multiply/:multiplier/with/:multiplicand",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"multiply",
+						":multiplier",
+						"with",
+						":multiplicand"
+					],
+					"variable": [
+						{
+							"key": "multiplier",
+							"value": "53737432",
+							"description": "(Required) "
+						},
+						{
+							"key": "multiplicand",
+							"value": "53737432",
+							"description": "(Required) "
+						}
+					]
+				},
+				"description": "This is the Get Numbers Multiplied operation"
+			},
+			"response": [
+				{
+					"id": "079102fd-c030-4b78-9e2f-f34601bc7356",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/multiply/:multiplier/with/:multiplicand",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"multiply",
+								":multiplier",
+								"with",
+								":multiplicand"
+							],
+							"variable": [
+								{
+									"key": "multiplier",
+									"value": "53737432",
+									"description": "(Required) "
+								},
+								{
+									"key": "multiplicand",
+									"value": "53737432",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "This is the Get Numbers Multiplied operation"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"result\": 11607753\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Numbers Divided",
+			"id": "b7e8e8f3-0f86-4ceb-b415-867a1c4f6e75",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/divide/:dividend/with/:divisor",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"divide",
+						":dividend",
+						"with",
+						":divisor"
+					],
+					"variable": [
+						{
+							"key": "dividend",
+							"value": "53737432",
+							"description": "(Required) "
+						},
+						{
+							"key": "divisor",
+							"value": "53737432",
+							"description": "(Required) "
+						}
+					]
+				},
+				"description": "This is the Get Numbers Divided operation"
+			},
+			"response": [
+				{
+					"id": "3b6cf9d9-93ca-41d5-8629-5f8ae6eb9921",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/divide/:dividend/with/:divisor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"divide",
+								":dividend",
+								"with",
+								":divisor"
+							],
+							"variable": [
+								{
+									"key": "dividend",
+									"value": "53737432",
+									"description": "(Required) "
+								},
+								{
+									"key": "divisor",
+									"value": "53737432",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "This is the Get Numbers Divided operation"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"result\": 11607753\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "00b0e349-604e-475b-b493-4aab516a72cb",
+			"key": "baseUrl",
+			"value": "https://alexviei-calc-api.azurewebsites.net",
+			"type": "string"
+		},
+		{
+			"id": "4c535565-17b0-41fb-99c8-8ebe79370d7b",
+			"key": "subtrahend",
+			"value": "53737432",
+			"type": "any"
+		}
+	]
+}
